@@ -1,0 +1,47 @@
+{
+    "id": "TreeAnnotation",
+    "script": "App-TreeAnnotation",
+    "label": "Tree Annotation",
+    "description": "Annotate a tree with genome database fields.",
+    "default_memory": "1G",
+    "parameters": [
+        {
+            "id": "newick_file",
+            "label": "Input Tree",
+            "required": 1,
+            "allow_multiple": 0,
+            "filename": "string",
+            "type": "newick"
+        },
+        {
+            "id": "feature_metadata_fields",
+            "label": "Gene Metadata Fields",
+            "required": 0,
+            "allow_multiple": 1,
+            "desc": "Fields to be retrieved for each gene.",
+            "type": "string"
+        },
+        {
+            "id": "genome_metadata_fields",
+            "label": "Genome Metadata Fields",
+            "required": 0,
+            "allow_multiple": 1,
+            "desc": "Fields to be retrieved for each genome.",
+            "type": "string"
+        },
+        {
+            "id": "output_path",
+            "label": "Output Folder",
+            "required": 1,
+            "desc": "Path to which the output will be written.",
+            "type": "folder"
+        },
+        {
+            "id":"output_file",
+            "label":"File Basename",
+            "required": 1,
+            "desc":"Basename for the generated output files.",
+            "type":"wsid"
+        }
+    ]
+}
